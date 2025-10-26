@@ -1,7 +1,3 @@
-Aqui está um arquivo instrucional completo, formatado em Markdown, ideal para ser o `README.md` do seu projeto. Ele guia o usuário desde os pré-requisitos até o teste de todas as rotas.
-
------
-
 # Backend de Irrigação (Node.js + Express + SQLite)
 
 Este é um backend simples em Node.js e Express para gerenciar um sistema de irrigação. Ele utiliza um banco de dados SQLite interno para armazenar o histórico de umidade, controlar o acionamento da água e gerenciar a autenticação de usuários com JSON Web Tokens (JWT).

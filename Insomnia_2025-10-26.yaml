@@ -1,0 +1,397 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1739703478735
+  modified: 1739703478735
+  description: ""
+collection:
+  - name: Websai
+    meta:
+      id: fld_5d088d85b3d04febb33fb5fcb182fea0
+      created: 1758281990757
+      modified: 1758281990757
+      sortKey: -1758281990757
+      description: ""
+  - name: Irrigação
+    meta:
+      id: fld_0fc37640bb6246f1b66ad2a68e2a8b91
+      created: 1761474502266
+      modified: 1761477554300
+      sortKey: -1761474502266
+      description: ""
+    children:
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/signup
+        name: Signup
+        meta:
+          id: req_aeda04c4987445368ac83a5ff90820e6
+          created: 1761474505707
+          modified: 1761474590795
+          isPrivate: false
+          description: ""
+          sortKey: -1761474505707
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "usuario": "adm",
+              "senha": "minha_senha_123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/signin
+        name: Signin
+        meta:
+          id: req_d06ce8e75a1b44e89b1ead17d474ddb7
+          created: 1761474613849
+          modified: 1761474654732
+          isPrivate: false
+          description: ""
+          sortKey: -1759878536653.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "usuario": "adm",
+              "senha": "minha_senha_123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/umidade/40
+        name: Enviar Umidade
+        meta:
+          id: req_9abb433852134f68ab175cfe3e195ef9
+          created: 1761474729582
+          modified: 1761476778491
+          isPrivate: false
+          description: ""
+          sortKey: -1759080552126.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_30020b7531484fbb937ae48856c082fb
+          - name: User-Agent
+            value: insomnia/11.6.2
+            id: pair_922c34ae45734613a3ea6658182897ee
+          - id: pair_ff41a73edf9d4fd594dec1a7c152b11c
+            name: authorization
+            value: ${% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ""
+            disabled: false
+          - id: pair_a0f2717db24147248627ed08668b60ad
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/historicoumidade
+        name: VErificar Umidade
+        meta:
+          id: req_1660ba3216184c928ce54618ce637cee
+          created: 1761476858383
+          modified: 1761476880351
+          isPrivate: false
+          description: ""
+          sortKey: -1758681559863.375
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_30020b7531484fbb937ae48856c082fb
+          - name: User-Agent
+            value: insomnia/11.6.2
+            id: pair_922c34ae45734613a3ea6658182897ee
+          - id: pair_ff41a73edf9d4fd594dec1a7c152b11c
+            name: authorization
+            value: ${% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ""
+            disabled: false
+          - id: pair_a0f2717db24147248627ed08668b60ad
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/agua
+        name: Interruptor Água
+        meta:
+          id: req_ea75eaf574e74dbeb0652ce60283c201
+          created: 1761476917309
+          modified: 1761476921490
+          isPrivate: false
+          description: ""
+          sortKey: -1758881055995.0625
+        method: POST
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_30020b7531484fbb937ae48856c082fb
+          - name: User-Agent
+            value: insomnia/11.6.2
+            id: pair_922c34ae45734613a3ea6658182897ee
+          - id: pair_ff41a73edf9d4fd594dec1a7c152b11c
+            name: authorization
+            value: ${% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ""
+            disabled: false
+          - id: pair_a0f2717db24147248627ed08668b60ad
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/agua
+        name: Verificar Água
+        meta:
+          id: req_fcc0bd2d62044f48a1595feda23fb94e
+          created: 1761476955202
+          modified: 1761476964696
+          isPrivate: false
+          description: ""
+          sortKey: -1758781307929.2188
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_30020b7531484fbb937ae48856c082fb
+          - name: User-Agent
+            value: insomnia/11.6.2
+            id: pair_922c34ae45734613a3ea6658182897ee
+          - id: pair_ff41a73edf9d4fd594dec1a7c152b11c
+            name: authorization
+            value: ${% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ""
+            disabled: false
+          - id: pair_a0f2717db24147248627ed08668b60ad
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev/api/usuario
+        name: Dados Usuários
+        meta:
+          id: req_0688825cea2b492d9ed766565f70243a
+          created: 1761477050814
+          modified: 1761477057694
+          isPrivate: false
+          description: ""
+          sortKey: -1758482063731.6875
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_30020b7531484fbb937ae48856c082fb
+          - name: User-Agent
+            value: insomnia/11.6.2
+            id: pair_922c34ae45734613a3ea6658182897ee
+          - id: pair_ff41a73edf9d4fd594dec1a7c152b11c
+            name: authorization
+            value: ${% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}
+            description: ""
+            disabled: false
+          - id: pair_a0f2717db24147248627ed08668b60ad
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_d06ce8e75a1b44e89b1ead17d474ddb7',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: New Event Stream
+        meta:
+          id: req_2a68ccb247c44ca383ee09d4a77b51e0
+          created: 1761478347080
+          modified: 1761478347080
+          isPrivate: false
+          description: ""
+          sortKey: -1761478347080
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+          - name: Accept
+            value: text/event-stream
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1739703503860
+    modified: 1761477061068
+  cookies:
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8E0FHi1JCVNKrny-ARCYWxM97wNPnQuetw-AtuCX9Bb9ZcCuP0Eb0EbO7BzRMjPiRQMKovpUe7tUS0oL3e4Vxmfa6UeV3mj7VsGeNkZEFTxvoFdXgF68UjiHN-Muon_STDCc9-WRESsgzudReJEgF8Q0kEmaUwIKe8cRCskHmrmHn8dYMBfAITeFPIushOOK6ZU-FxhoU2JxNJ2oAWl_yYMF-rOm9nMSqtBbm0lis0DEtC2QChd18dy8maiy0QZBJifex9Rtt65bomDoZcVqyT-iU_KfzcS3H0p1L-H_ImWinhbK0buMubhobdYBa0Rr3V7pQRlEMkzf5wmXPK-G9kGxuwe-k-J5yB4o3lWLXeWwb9QZjqIPzZuEE4x1Y5s3J8_sPOcpbmTEC4EIUmcNd94lOpu1ep0bvlDDmjo5HN3P-hdeyRHJCAu9-MKv1e-5urSUZh3KynM0GJIIKkP1qIvJDciYgxZbJZQCz20lBuQX8Mi_C_q6OmERotJ2nEfmjN7nMCb64jL3FFIdmzuZLqOKfVG1_juCTGzD-O3yIflRtKRfuB1ZKtanfTgw4F9MThFsbgzS1pR6YeJupm2-jPLalk19R2FYMAMdYw-3nZO97PTE4eKUq0LEbvJXXJVg3nI4qE3LykoCSNQ5YuHtDMTO2Bsw12AADRO8-sZ6OptWuRAB4g12o6pTPIaxwnyNpYjPhCbEJQtykjP4vNkcGk-FLwnmslQytKufl-wkiJkS_1E6LmWnaM869OofPlTSGcQQ5ytmayoH83abNUwJjp1SJUBW92qsZD59k_TWq1NNOCVpieEt62yjZlI57Z4CYFkufCwmirp4ThLhSFaQahywxerLyBGjZuJCpaXddwNh5dL9ttSF1IfAKeF5M-yx86LvbWTJUqttBqxUMEiU2r9NSt0t6Po8l7C3AvKA2Socf8DJCgotmtju7WkFuJf4uNWR56x3a7zxshZ4a4RTCa4-z7A7Jy5IhNBJF9vQ-aYVSV3QAUlBtogw9279IenbOA
+      domain: special-goldfish-957q7pw6qx7c95v-3000.app.github.dev
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-02-16T11:00:32.479Z
+      lastAccessed: 2025-02-16T11:41:47.766Z
+      sameSite: none
+      id: c007e660-0e15-4d9f-9c84-bf38d3526413
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8Cs4yarcs6pKkdu0hlKHsZscwJi3uINbtoNUeeTnXKo97LZihWEu6sqYtLrQukzaM34kK4yl0vWPUSutwuYwLRRuy3G6cgoaoUPWN1KCVqu6j7nXeCnwz0Lfah0mOQdET5UlLiwj0vN09CltYKWVi_UQ2QSCEetatjZM92JUpzsF-tcPzmoENtZzXOBMlHNyjcRp6qlIAbXTYM-NG0htaR3aQJ8mOM_W53_Nf4czHi_VcfQW_gUe0KjH4qTTJIUVceZQwS0jTKZCqA70dzMAyO9yLDmVBpFjiz-TdR3CmLxlvj_lncTTJf4fXIvkpyVWtsUzCCWs1UeSBUY7ybWYwKQFWEX4n1LWXFo2mxPsHZB_wfNutLYWRzgF_IhqeEkOMp6N9eBRQopHSe3wQV1O8ubCdT0tXagGtSxEFiNAXp3TEv6MS3DbYeivbgxitsOYqWIVUzeVRUmr1CNfDXnBROhxk0vflk-g0XXk7zEqLZKA5ycn97SsplNkfw_emdrGX-BwadqSdMePXIzRGGOpi1y9vIQMnuvMeBuGU7PTOU3FoQ7dHtf91EWrU7trC8Jd7EdM-_uAg0da6uT4reQwOorBZahLhkV5eVMpMO2Jcl6KbKhN8ra6IDBU8lxvFFeCp1LrTKQeJvqEBDnx-L9B9ObIBLN4ehlUS99SocTGQ0DZckcFUu8KGqMWO66vGlpk9Hl7LN1RpF61vMeI54mc6Wm0r-XkLCPTweSJEwROC6P4JQrVbDjToskrOQiQebBLE2zJTvGTqE54TsoCAC0IPhm5Tn5vK3-CODzbXSm7ZIgOLDrxbS6EAN0RYtbqVKTQIYu7-a29lrJ7-OSjV6GWCLg-3XEPxNyOCPHQ-tcRGQympIfRetI_LorkKUVT6tixRUssZ_-gXyoDaXaSz0P01t8bmiYbQJ-qfCuvkM-ObexpXQxjQqOnm7aEic_Rpu2yn5U6QWJIQylzuc1uVvMEmFwhOCv0K-P9cZF31wBGjGXJ
+      domain: potential-sniffle-pwjgjx9jx5jh6r54-3000.app.github.dev
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-02-16T12:33:10.935Z
+      lastAccessed: 2025-04-22T00:37:36.916Z
+      sameSite: none
+      id: 49f16538-f20b-4381-9fa8-f5a577d39d38
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8Cs4yarcs6pKkdu0hlKHsZu2YJkrKGWXic5BsW3ce6otQdrIOCq-XbsOre8nsnLYOu43heIQ6jxD3Yk025MYaaCmDms9oP_hOeKl1FzqZYE4IB5doG63tU3zLYceJgnnsA9UN6tExbCqF0m1irRKMLsr3HYRaxSLCSFC4OhJ6Z60CRVYZe4fOqonp3U_6kUOHZs4VF8UbojkSn9gzG-ELAKQ-b2ptv6Vle6EgLrhHtcnvZ1cFEnbK53YfIB6e9KKxaanGovcHfXkItSsQvrArlyL8GIQIZyGBsK-XECzSDOL-JJL3KcYBmyphk9icDe3byMWqklt1IJdbSX5jCoXAvrEHhICU9E0nJ7i30l42CtcsTU9sGpHdKMuEW3CmVo2gSrnR9rjxXkZWEwfZgwsSOvf0FVwqAgBWDds1dALbl8bKo0XVAHunjNL-6rcWoqYWwcyHbktL8tiin-7XpP8iQmYm6EB8pJ0_xPhUX9674hnErI1o3iYCRyRYZEA7IUfdH4x9UuK23cVVtYAA3_4lh5az_2N2UEXJp5zVdga-6m4KLiWEhVIwYO4vx_CbPkuytcp9r6QmjvtZIrMC2SGROPQfHQmkOywNt6WtiIKrVRZ0Iu6BYXR0InzAhsbFa71Zt7C4BTw18gbF0QQ1bYTm1w1VdiFKVk3hpFbtJUV_qB6w85TzqYpmwnH9Rlkz-8KaPlUDulu1BXc9TbvCTWtewCNA3c5YxeUCby2_9dIT9S0zbuO5p_ASVHa5I2G7ANQxfHkScdJ96sPZDKpQH9frOXTq8NsGx-fHJcQfa580Nrs52jQEkZ8yPMyPORzh7wAmiqC_4hbVyAB2nQd2KhqgyqUvxfJWnIU2QaEc5_hVA49IkFvptJ9soCeAH1SY3U0BRU0mEOS9qdELL1pDeGZZ56MUUT6elMb7Ki4d67-NXr1Txvvq3iw0fI5nhW9xc3PVoFNFMEDJneTnx6WEZCnBQRu7JZsSZIz96QjTgycu5o7
+      domain: scaling-space-fishstick-9w47w5rxrx3x7jx-3000.app.github.dev
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-02-19T13:37:52.522Z
+      lastAccessed: 2025-04-16T12:07:58.965Z
+      sameSite: none
+      id: f570507c-15ff-4aa5-8a03-beea28914b67
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8Cs4yarcs6pKkdu0hlKHsZvsCTHUiPvbVlYkyxQupT5J7NG_Kw2cByCwPGqJsJV6huNrVZAxCFEJNDwJqWNRMDlebTqXNdRlTUP86OE4wc7PAqqr4E7br_A3K8ctxsMLfIDEtTdza4R8FlztmqoFFUBfsyAv9EGD0aylDGss8ZxD-TRFKgK5JMeBWxl76czeEwtPKXkFaWsjJfasjVhhKpjRSaiSqgLyxoOXLbN7bV6Eh-8BCx7Z3dERLEx7RPSs0VLEx3Fkr016lrr4S-xLnAQi9qfahO4Y-uvUd8Rjaue1DdjU4nK6NctQhFZr5CHdgklu3IbPWO6z1WexkE4OELgu200o4LtDBR4aODgnnliip9OeJwYlbOwLsC0t9YEkRHmuH7sTahH7PA2eJ0pLQNgflihuDcvAwdLBP5NOMtWFqk43Ls6YjLBY3UAnedHUm3a7vxJO9xTzOgh2kRFJ0emXEmifqmFXMzIq1tGVnLIw5KwayeRlBx7JYV73ob4RRgiKvuVaqP_3085TughR2drCaCykRavcverICsEwqK0TITr-NSVluZgG94P_lYLYUykkKmFkqO4d_UejGpxnqFaxMtkYwcH-EmQJlX4PeJWndR1y9g_iEpjOI3nc9OE20aCye2tS5Yeo8pf4NUzHz_W5YkRf-gQ46ne5JwIEAp1hMtKzaR-eNT_wM6dvqgUF8-_ipO2524szTrvvZGRJlbCmjTzWaDNK_XQpEnaef8NfGFdo219Zc0vp0z3ZugqLnIbiUifHlR89KD3kjamU7Wn0MzBRCfPZQlpxSx0IS-mc4ttTzRqDyPZMALRqJf45Jnc0Gp_XvEi3WTA7gUhci8pqPWDro-TVXPheFyyWiDaUSMnnhb668MbCvb1Sdm6X4yeq1LdJvO03eCVUGAhfCftqw6jXoquXRXbMvOt_SIIr_i7ir2TIfKIN1SRJxHnH6QmidunXhX46sHPqTl6Lt-3Qhgqu-JCesRH79uCCaXLx
+      domain: shiny-zebra-q4797w6v79g34954-3000.app.github.dev
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-03-11T11:23:16.065Z
+      lastAccessed: 2025-04-15T11:25:35.506Z
+      sameSite: none
+      id: e184bfc2-c752-447c-aaa9-8b992de15991
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8Cs4yarcs6pKkdu0hlKHsZv9_rK_uwQA4_ahCGOJ1o4TMb8XB7_bwGDW9vAiqV931a-X887NSIFYJicWrwX4qm2nY4HKoMZ1mBErggd9ZIjZUwx7pvubiwr4vZmSdyAVKNj29FiIrN6n0_CqDA_2AZ93LOGTMZMPSDPDVvnrDcVlpZIuXqkpvzekbMd1m7tl63VTMt1RQry61ZMOtxtap_Jc07ndDd3lBj8bDrSXOpiDpXrq1Qx3_pPpvyJyXj1agmZHkgSW5Wcu5YvBjlN_vgdvYYDSIysGD8NS2vUhQfxTN7KOSH_mtwBuqfyJNaBNXYe4HXtCT6sUUow56UBDw6hG8s0QRu6ZWELxGjQ3EJxxN7POQRanU9mfnheqp8x97Jse98EyBz7z-zJKmbFFibZ3foPT5MqlH5CYF_KzpEOn8aN-wbUF12UR3w_O_AJ2XWu5tkysOBR-uXoW5834eCbBZ-xE5ueb7WExwPrL_YKTDNPfJjvFl04rSDbW9IFEc4H1T9chu01XWpj_b2JfKf_xg9zf-eAuYpVdwtGix81BFAb9BOXM9_M4qgOyxp6ZfU51OeuI1VJWz6M5yFqKHryEEo973mGO5dkZFUYHKAn4wzBGwCy2cNu7culc0bCJrIMqUN5gv9a1jWGmkCyaKLVk9XXesUFE8a4xLYtmIjQk9pvlScfdQD_bn8TxGmWpAWOk2wiZ7NkLt_HXu1R3ya6wLKGwZcUkva8rDcbJPGYyx7HELx8bRj30_2-Y7JREC0Ppfa-yE3oR7odrOxQxFFYiuvonbDdfJxsquO_pYnDxl099C26Oluy-W164nGua8aStvhx2mvf6wvjIaxCgYtKlQmBtqC-VjRpwbGShNqgclz9R0s1pBksGuNg-JwodwotcxbOGl86QY-ux3xFN-SRtOyOtzOlxohLfIDrelubmukgJHUhrjDyXof-H4UmThDOkOazIp6fu9t4rOmx8fojLFs_1vEkIEgWEA92QOwrs9eZJ3PQpiWxprMpfFluU4w
+      domain: curly-space-trout-4vjgjx6qwq5hqp66-3000.app.github.dev
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-04-21T12:37:40.756Z
+      lastAccessed: 2025-04-29T11:52:21.565Z
+      sameSite: none
+      id: 4f7b939b-3159-4cf6-8d87-ab8d4c684218
+    - key: .Tunnels.Relay.WebForwarding.Cookies
+      value: CfDJ8Cs4yarcs6pKkdu0hlKHsZvuYhbYYv7o0uDtPAjTpQ7D1pM9TsOkK2klWlaYoRvT3sTOthOaxsmN6QWvwTZfOXjAxqc3scBiFnx9Ck7xSQiYVJQIxjMj6BIePkg_fZIbtUJEkGjRP1H7kP9Cv9aYdr15hrNU6X1iQNRsPPUYKx2sqjI3icMjp9BX0WexliBwc3m-Q-8st7H5QYyPn4yiF0MIL96Uj0przCBfnpptoOzbLgwjlQNlQhGgCKwdVYb2ydNRyOMIn9s1pSuzVYyMJUEihwHkXrERGNBrN8Uske_xyCHz9huXm-PQpM6U_JUavJ5U-hTRKU0lYQK9AuW0CBqijvvKAxCfsASbROfTWz05PjSEMa0yIptXUiJQ70DxjhWoMgM-rgew2QY24wsDaSMAf3n5sAMg_ZrjyuDYR5YlF6IHZD1kvSgjWXox_Lx7goWCp6cLSUPG3KgZmv3EvXPaIh2CjXhjotNu_LojFfnbJrFiADD8UTFYsAokD-FCrn3poX14UlRv8lad5uK8A-TJPEYEdpeweVxyuZHFXNLwyz9xnTlKs803kF-_Jne2TtradefmnAaky74EfVgK9F17Nw6fVW4Ewupyz335HGjWbAKAhpqAgu-WqAFaVTMIs_0SHzfusLsCHilFZS_H3K2p8_OP6no4pF1oKh8wLyS_tHzXaywD6sORFh5GdaE6X21odNk6cm4K9_gUXpOBG1uQvKhX82p8jxAwbsoPRYADZpfkOM_1LBtu5RHxNgMNm5fGtSFBrGULScKUvNH4OsS2YDxgmiCpyF7dnAuyXnuyheHZPjz_vzFdMuwXf8biCaHJj75mAnf77Q0buvIOz5XijP-Oh2nqmtjkr7FcUFJNa402zGFuKvH6ETifm0vnUAwvgme6rftxKAVYOAZROYE9QH4TiU5ZM3iqxlU_wwgAplKB3tl3MtEMj4hwCI3_F7ihQO-7S7YYA_nvL0Z2rS0oYreYer0Pq6Xie5TtveT1
+      domain: crowded-fishsticks-pwjgjx97p9j27v6-3000.app.github.dev
+      path: /
+      secure: true
+      extensions:
+        - Partitioned
+      hostOnly: true
+      creation: 2025-10-26T10:29:54.470Z
+      lastAccessed: 2025-10-26T11:11:01.068Z
+      sameSite: none
+      id: 50cf0af4-87bc-4649-a2d5-9b2e9447f37f
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1739703503616
+    modified: 1739703503616
+    isPrivate: false

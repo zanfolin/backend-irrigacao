@@ -5,7 +5,7 @@ export const addUmidade = async (req, res) => {
   try {
     const { umidade } = req.params;
     const valor = parseInt(umidade, 10);
-
+    
     if (isNaN(valor) || valor < 0 || valor > 100) {
       return res
         .status(400)
