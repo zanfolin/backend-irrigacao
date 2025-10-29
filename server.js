@@ -9,13 +9,13 @@ const PORT = process.env.PORT || 3000;
 // Middleware para interpretar JSON no corpo das requisições
 app.use(express.json());
 
-// Prefixa todas as rotas com '/api'
-app.use("/api", routes);
-
 // Rota raiz de boas-vindas
 app.get("/", (req, res) => {
   res.send("API de Irrigação no ar! 🚀");
 });
+
+// Prefixa todas as rotas com '/api'
+app.use("/api", routes);
 
 // Inicia o servidor
 app.listen(PORT, () => {
